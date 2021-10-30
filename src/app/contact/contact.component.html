@@ -1,0 +1,64 @@
+<div class="tile is-child box custom-message">
+  <article class="message is-info">
+    <div class="message-header">
+      <p>
+        <fa-icon [icon]="['fas', iconName]" flip="horizontal"></fa-icon>&nbsp;
+        {{ cardTitle }}
+      </p>
+    </div>
+    <div class="message-body has-background-white">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-32x32">
+            <img src="/assets/images/telegram.png" alt="Telegram logo" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-6">{{ contactInfo.telegram }}</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-32x32">
+            <img src="/assets/images/email_envenlope.png" alt="Email logo" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-6">
+            <a href="mailto:francisco.jardon@outlook.com">
+              {{ contactInfo.email }}</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-32x32">
+            <img src="/assets/images/map_pin_place_icon.png" alt="City logo" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-6">{{ contactInfo.location }}</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-32x32">
+            <img src="/assets/images/linkedin_logo.png" alt="linkedin logo" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-6">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://www.linkedin.com/in/francisco-jardon-e-b4639930"
+            >
+              {{ contactInfo.linkedin }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

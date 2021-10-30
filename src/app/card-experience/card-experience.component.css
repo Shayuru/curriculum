@@ -1,0 +1,42 @@
+.content ul {
+  margin-top: 0em;
+}
+.custom-icon {
+  padding-top: 0.8rem;
+}
+.section {
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0rem;
+}
+header:hover {
+  cursor: pointer;
+}
+.subtitle.is-7 {
+  font-size: 0.8rem;
+}
+.timeline-content {
+  width: 100%;
+  min-width: 13.5rem;
+}
+.card-header p:not(:last-child) {
+  margin-bottom: 0rem;
+}
+.card-header-title {
+  font-weight: 450;
+}
+.content dd {
+  margin-left: 1em;
+}
+.timeline-item .timeline-marker.is-icon {
+  height: 1.7em;
+  width: 1.7em;
+}
+.arrow-icon {
+  padding-top: 0.8rem;
+  padding-right: 0.6rem;
+}
+.card-content {
+  padding-left: 1.1rem;
+}

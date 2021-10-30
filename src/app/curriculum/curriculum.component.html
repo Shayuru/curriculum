@@ -1,0 +1,90 @@
+<div class="container" role="main">
+  <div class="card">
+    <div class="card-image">
+      <figure class="image image is-3by1">
+        <img
+          src="/assets/images/header_profile.jpg"
+          alt="Header Image Profile"
+        />
+      </figure>
+    </div>
+    <div *ngIf="!(isReponseReceivedPromise | async)" class="loading">
+      <progress class="progress is-small is-white" max="100">15%</progress>
+      <p>Loading...</p>
+    </div>
+    <div *ngIf="isReponseReceivedPromise | async" class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-128x128">
+            <img
+              class="is-rounded"
+              src="/assets/images/profile.jpg"
+              alt="Profle image"
+            />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">{{ curriculumInfo.name }}</p>
+          <p class="subtitle is-6">{{ curriculumInfo.title }}</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <br />
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-12">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <p class="title has-text-info">Profile</p>
+                <div class="content has-text-justified">
+                  <p *ngFor="let paragraph of curriculumInfo.profile">
+                    {{ paragraph }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tile custom-title">
+              <div class="tile is-parent is-vertical is-4">
+                <app-card-list
+                  [curriculumInfo]="curriculumInfo"
+                ></app-card-list>
+              </div>
+              <div class="tile is-parent">
+                <div class="tile is-child box custom-message">
+                  <article class="message is-info">
+                    <div class="message-header">
+                      <p>
+                        <fa-icon [icon]="['fas', 'clock']"></fa-icon
+                        >&nbsp;Professional Experience
+                      </p>
+                    </div>
+                    <div class="message-body has-background-white">
+                      <div class="timeline">
+                        <header class="timeline-header">
+                          <span class="tag is-medium is-info">Now</span>
+                        </header>
+                        <ng-container
+                          *ngFor="let experience of curriculumInfo.experience"
+                        >
+                          <app-card-experience
+                            [experience]="experience"
+                          ></app-card-experience
+                        ></ng-container>
+                        <div class="timeline-header">
+                          <span class="tag is-medium is-info">2003</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <app-curriculum-footer
+          [errorOccurred]="errorOccurred"
+        ></app-curriculum-footer>
+      </div>
+    </div>
+  </div>
+</div>

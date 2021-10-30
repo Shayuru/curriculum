@@ -1,0 +1,8 @@
+{
+  "/prod/*": {
+    "target": "https://api.franciscojardon.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,85 @@
+<div class="timeline-item">
+  <div class="timeline-marker is-icon">
+    <fa-icon [icon]="['fas', 'flag']"></fa-icon>
+  </div>
+  <div class="timeline-content">
+    <p class="heading subtitle is-7 has-text-info">
+      {{ experience.position }} <br />
+      {{ experience.company }} <br />
+      {{ experience.location }}<br />
+      {{ experience.date }}
+    </p>
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <header class="card-header" (click)="togleCardExperience(cardHeader)">
+            <p class="card-header-title">More information</p>
+            <div #cardHeader class="arrow-icon">
+              <fa-icon
+                [icon]="['fas', 'caret-down']"
+                class="is-vcentered"
+              ></fa-icon>
+              <fa-icon [icon]="['fas', 'caret-up']" class="is-hidden"></fa-icon>
+            </div>
+          </header>
+          <div
+            [@openClose]="isOpen ? 'open' : 'closed'"
+            class="card-content is-hidden"
+          >
+            <div class="content has-text-justified">
+              <dl>
+                <ng-container
+                  *ngFor="let description of experience.description"
+                >
+                  <dd>
+                    <div class="columns is-mobile">
+                      <div class="is-1 custom-icon">
+                        <fa-icon [icon]="['fas', 'caret-right']"></fa-icon>
+                      </div>
+                      <div class="column">
+                        {{ description.activity }}
+                      </div>
+                    </div>
+                  </dd>
+                  <ng-container
+                    *ngIf="!(description.subactivities?.length == 0)"
+                  >
+                    <dd>
+                      <div class="columns">
+                        <div class="is-1"></div>
+                        <div class="column">
+                          <ul>
+                            <ng-container
+                              *ngFor="
+                                let subactivity of description.subactivities
+                              "
+                            >
+                              <li>
+                                {{ subactivity }}
+                              </li>
+                            </ng-container>
+                          </ul>
+                        </div>
+                      </div>
+                    </dd>
+                  </ng-container>
+                </ng-container>
+                <dd>
+                  <div class="columns is-mobile">
+                    <div class="is-1 custom-icon">
+                      <fa-icon [icon]="['fas', 'wrench']"></fa-icon>
+                    </div>
+                    <div class="column">
+                      Main technologies/tools:<br />
+                      {{ experience.tools }}
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

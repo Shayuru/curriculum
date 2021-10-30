@@ -1,0 +1,16 @@
+<div class="tile is-child box custom-message">
+  <article class="message is-info">
+    <div class="message-header">
+      <p>
+        <fa-icon [icon]="['fas', iconName]"></fa-icon>&nbsp; {{ cardTitle }}
+      </p>
+    </div>
+    <div class="message-body has-background-white">
+      <ul>
+        <li *ngFor="let item of cardItems">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>

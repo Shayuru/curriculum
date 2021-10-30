@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+.message.is-info .message-body {
+  color: #4a4a4a !important;
+}
+
+.custom-message {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.notcompatible {
+  width: 100%;
+  text-align: center;
+  background-color: #3e8ed0;
+  color: #ffffff;
+  height: 1080px;
+}
+
+.notcompatible a:link {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.notcompatible a:hover {
+  text-decoration: none;
+}
+
+.notcompatible a:visited {
+  color: #ffffff;
+}

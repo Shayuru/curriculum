@@ -1,0 +1,9 @@
+.footer {
+  padding: 0.6rem;
+}
+footer .notification {
+  width: 26rem;
+  margin: auto;
+  font-size: 0.75rem;
+  margin-bottom: 1em;
+}

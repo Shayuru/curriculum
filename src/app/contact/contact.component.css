@@ -1,0 +1,19 @@
+.media-left {
+  margin-right: 0rem;
+}
+.media + .media {
+  padding-top: 0rem;
+}
+.title {
+  font-weight: inherit;
+}
+figure {
+  margin-left: 0em;
+  margin-right: 0.8em;
+}
+.tile.is-child {
+  margin-bottom: 0.75rem !important;
+}
+.media + .media {
+  border-top: none;
+}

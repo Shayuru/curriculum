@@ -1,0 +1,65 @@
+<div class="tile is-child box custom-message">
+  <article class="message is-info">
+    <div class="message-header">
+      <p>
+        <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>&nbsp; Education
+      </p>
+    </div>
+    <div class="message-body has-background-white">
+      {{ curriculumInfo.education.grade }}<br />
+      {{ curriculumInfo.education.school }}<br />
+      {{ curriculumInfo.education.date }}
+    </div>
+  </article>
+</div>
+<app-contact
+  cardTitle="Contact"
+  iconName="phone"
+  [contactInfo]="curriculumInfo.contact"
+></app-contact>
+<app-card-info
+  cardTitle="Languages"
+  iconName="language"
+  [cardItems]="curriculumInfo.languages"
+></app-card-info>
+
+<app-card-info
+  cardTitle="Latest trainings"
+  iconName="book"
+  [cardItems]="curriculumInfo.courses"
+></app-card-info>
+
+<app-card-info
+  cardTitle="Soft Skills"
+  iconName="thumbs-up"
+  [cardItems]="curriculumInfo.softSkills"
+></app-card-info>
+
+<app-card-info
+  cardTitle="Project Methodologies/Frameworks"
+  iconName="tasks"
+  [cardItems]="curriculumInfo.sdlcTypes"
+></app-card-info>
+
+<app-card-info
+  cardTitle="Hobbies"
+  iconName="camera"
+  [cardItems]="curriculumInfo.hobbies"
+></app-card-info>
+
+<div class="tile is-child box custom-message">
+  <article class="message is-info">
+    <div class="message-header">
+      <p><fa-icon [icon]="['fab', 'github']"></fa-icon>&nbsp;GitHub</p>
+    </div>
+    <div class="message-body has-background-white">
+      <a
+        href="https://github.com/debranax"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://github.com/debranax</a
+      >
+    </div>
+  </article>
+</div>
