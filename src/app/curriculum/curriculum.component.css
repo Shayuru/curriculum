@@ -2,3 +2,10 @@
   text-align: center;
   padding-bottom: 2rem;
 }
+
+@media only screen and (max-width: 768px) {
+  article .message-body {
+    padding-left: 0.5rem;
+    padding-right: 0.9rem;
+  }
+}

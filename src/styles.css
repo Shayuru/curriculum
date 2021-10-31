@@ -27,3 +27,9 @@
 .notcompatible a:visited {
   color: #ffffff;
 }
+
+@media only screen and (min-width: 768px) {
+  .text-justified {
+    text-align: justify !important;
+  }
+}
