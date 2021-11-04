@@ -9,3 +9,9 @@
     padding-right: 0.9rem;
   }
 }
+.card .media:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.profile {
+  margin-bottom: 1.2rem !important;
+}
