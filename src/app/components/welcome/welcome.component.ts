@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DefaultCurriculumInfo } from '../models/default-info';
-import { CurriculumService } from '../services/curriculum.service';
+import { DefaultCurriculumInfo } from '../../models/default-info';
+import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
 
 const sleepTime: number = 6000;

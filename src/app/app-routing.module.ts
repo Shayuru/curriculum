@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CurriculumComponent } from './curriculum/curriculum.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
   {
