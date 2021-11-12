@@ -17,6 +17,7 @@ export var DefaultCurriculumInfo = {
     email: 'francisco.jardon@outlook.com',
     location: 'Toluca, Mexico State',
     linkedin: 'http://www.linkedin.com/in/francisco-jardon-e-b4639930',
+    github: 'https://github.com/Shayuru',
   },
   languages: ['English - Intermediate/Advance', 'Spanish - Native'],
   courses: [
