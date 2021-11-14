@@ -18,6 +18,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CurriculumFooterComponent } from './components/curriculum-footer/curriculum-footer.component';
 import { CardExperienceComponent } from './components/card-experience/card-experience.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CardExperienceComponent } from './components/card-experience/card-exper
     PageNotFoundComponent,
     CurriculumFooterComponent,
     CardExperienceComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

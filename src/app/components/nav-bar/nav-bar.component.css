@@ -1,0 +1,17 @@
+.navbar {
+  position: absolute;
+  background-color: inherit;
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+}
+.navbar-item {
+  color: #4a4a4a;
+  font-weight: 600;
+}
+.navbar-item:hover {
+  color: #3e8ed0;
+}
+
+.navbar-start {
+  flex-direction: column;
+}

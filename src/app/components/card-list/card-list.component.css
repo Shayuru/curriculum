@@ -1,3 +1,7 @@
 .tile.is-child {
   margin-bottom: 0.75rem !important;
 }
+
+.tile.is-child:last-of-type {
+  margin-bottom: 0rem !important;
+}

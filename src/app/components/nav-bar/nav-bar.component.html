@@ -1,0 +1,32 @@
+<nav class="navbar is-transparent">
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <a
+        class="navbar-item has-tooltip-arrow has-tooltip-right"
+        (click)="scrollTo('professionalexp')"
+        data-tooltip="Professional Experience"
+      >
+        <fa-icon [icon]="['fas', 'clock']" size="lg"></fa-icon>
+      </a>
+
+      <a
+        class="navbar-item has-tooltip-arrow has-tooltip-right"
+        (click)="scrollTo('contact')"
+        data-tooltip="Contact"
+      >
+        <fa-icon
+          [icon]="['fas', 'phone']"
+          flip="horizontal"
+          size="lg"
+        ></fa-icon>
+      </a>
+      <a
+        class="navbar-item has-tooltip-arrow has-tooltip-right"
+        (click)="scrollTo('github')"
+        data-tooltip="GitHub"
+      >
+        <fa-icon [icon]="['fab', 'github']" size="lg"></fa-icon>
+      </a>
+    </div>
+  </div>
+</nav>
