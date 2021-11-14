@@ -1,6 +1,6 @@
 <div class="tile is-child box custom-message">
   <article class="message is-info">
-    <div class="message-header">
+    <div id="education" class="message-header">
       <p>
         <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>&nbsp; Education
       </p>
@@ -13,6 +13,7 @@
   </article>
 </div>
 <app-contact
+  id="contact"
   cardTitle="Contact"
   iconName="phone"
   [contactInfo]="curriculumInfo.contact"
@@ -47,7 +48,7 @@
   [cardItems]="curriculumInfo.hobbies"
 ></app-card-info>
 
-<div class="tile is-child box custom-message">
+<div id="github" class="tile is-child box custom-message">
   <article class="message is-info">
     <div class="message-header">
       <p><fa-icon [icon]="['fab', 'github']"></fa-icon>&nbsp;GitHub</p>

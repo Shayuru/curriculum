@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .message.is-info .message-body {
   color: #4a4a4a !important;
 }

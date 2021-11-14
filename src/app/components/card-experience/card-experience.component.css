@@ -12,6 +12,7 @@
 }
 header:hover {
   cursor: pointer;
+  background-color: #fafafa;
 }
 .subtitle.is-7 {
   font-size: 0.8rem;
