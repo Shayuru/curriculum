@@ -19,7 +19,7 @@ export var DefaultCurriculumInfo = {
     linkedin: 'http://www.linkedin.com/in/francisco-jardon-e-b4639930',
     github: 'https://github.com/Shayuru',
   },
-  languages: ['English - Intermediate/Advance', 'Spanish - Native'],
+  languages: ['English - Intermediate/Advanced', 'Spanish - Native'],
   courses: [
     'Test Driven Development & Behavior Driven Development',
     'Security Engineering on AWS',
