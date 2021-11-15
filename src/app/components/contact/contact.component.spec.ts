@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
 
-import { DefaultCurriculumInfo } from '../models/default-info';
+import { DefaultCurriculumInfo } from '../../models/default-info';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;

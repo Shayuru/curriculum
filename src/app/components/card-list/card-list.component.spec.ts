@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardListComponent } from './card-list.component';
 
-import { DefaultCurriculumInfo } from '../models/default-info';
+import { DefaultCurriculumInfo } from '../../models/default-info';
 
 describe('CardListComponent', () => {
   let component: CardListComponent;

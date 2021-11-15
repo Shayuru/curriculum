@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WelcomeComponent } from './welcome.component';
 
-import { CurriculumService } from '../services/curriculum.service';
+import { CurriculumService } from '../../services/curriculum.service';
 
 import { HttpClientModule } from '@angular/common/http';
 
