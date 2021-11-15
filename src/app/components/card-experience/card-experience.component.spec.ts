@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardExperienceComponent } from './card-experience.component';
 
-import { DefaultCurriculumInfo } from '../models/default-info';
+import { DefaultCurriculumInfo } from '../../models/default-info';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 

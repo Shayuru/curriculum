@@ -2,11 +2,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CurriculumComponent } from './curriculum.component';
 
-import { CurriculumService } from '../services/curriculum.service';
+import { CurriculumService } from '../../services/curriculum.service';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { DefaultCurriculumInfo } from '../models/default-info';
+import { DefaultCurriculumInfo } from '../../models/default-info';
 
 import { RouterTestingModule } from '@angular/router/testing';
 
