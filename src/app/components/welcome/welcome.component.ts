@@ -33,11 +33,11 @@ export class WelcomeComponent implements OnInit {
     let startTime: Date = new Date();
 
     this._curriculumService.getCurriculInfo().subscribe(
-      async (result) => {
+      (result) => {
         this.curriculumInfo = result;
         this.navigateToRoute(startTime);
       },
-      async (error) => {
+      (error) => {
         console.error(<any>error);
         this.curriculumInfo = DefaultCurriculumInfo;
         this.errorOccurred = true;
@@ -46,7 +46,7 @@ export class WelcomeComponent implements OnInit {
     );
   }
 
-  async navigateToRoute(startTime: Date) {
+  navigateToRoute(startTime: Date) {
     delayIfNeeded(startTime).then(() => {
       this.router.navigate(['/curriculum'], {
         state: {
