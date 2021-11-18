@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { DefaultCurriculumInfo } from '../../models/default-info';
 import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import {
+  getDefaultInfo,
+  getlocalStorageLanguage,
+} from '../../utils/common.utils';
 
 const sleepTime: number = 6000;
 
@@ -23,11 +27,16 @@ const delayIfNeeded = async (startTime: Date) => {
 export class WelcomeComponent implements OnInit {
   public curriculumInfo: any;
   public errorOccurred: boolean = false;
+  private localeId: string;
 
   constructor(
     private _curriculumService: CurriculumService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private _translate: TranslateService
+  ) {
+    this.localeId = getlocalStorageLanguage(localStorage);
+    this._translate.use(this.localeId);
+  }
 
   ngOnInit(): void {
     let startTime: Date = new Date();
@@ -39,7 +48,7 @@ export class WelcomeComponent implements OnInit {
       },
       (error) => {
         console.error(<any>error);
-        this.curriculumInfo = DefaultCurriculumInfo;
+        this.curriculumInfo = getDefaultInfo(this.localeId);
         this.errorOccurred = true;
         this.navigateToRoute(startTime);
       }

@@ -13,7 +13,9 @@
       <div class="container">
         <div class="card">
           <header class="card-header" (click)="togleCardExperience(cardHeader)">
-            <p class="card-header-title">More information</p>
+            <p class="card-header-title">
+              {{ "cardExperience.moreInformation" | translate }}
+            </p>
             <div #cardHeader class="arrow-icon">
               <fa-icon
                 [icon]="['fas', 'caret-down']"
@@ -70,7 +72,7 @@
                       <fa-icon [icon]="['fas', 'wrench']"></fa-icon>
                     </div>
                     <div class="column">
-                      Main technologies/tools:<br />
+                      {{ "cardExperience.mainTechnologies" | translate }}<br />
                       {{ experience.tools }}
                     </div>
                   </div>

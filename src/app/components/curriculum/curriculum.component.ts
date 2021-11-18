@@ -1,7 +1,11 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { DefaultCurriculumInfo } from '../../models/default-info';
+import { Component, OnInit } from '@angular/core';
 import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
+import {
+  getDefaultInfo,
+  getlocalStorageLanguage,
+} from '../../utils/common.utils';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-curriculum',
@@ -14,11 +18,16 @@ export class CurriculumComponent implements OnInit {
   public errorOccurred: boolean = false;
   public isReponseReceivedPromise!: Promise<boolean>;
   private routeState: any;
+  private localeId: string;
 
   constructor(
     private _curriculumService: CurriculumService,
-    private router: Router
+    private router: Router,
+    private _translate: TranslateService
   ) {
+    this.localeId = getlocalStorageLanguage(localStorage);
+    this._translate.use(this.localeId);
+
     if (router?.getCurrentNavigation()?.extras.state) {
       this.routeState = router.getCurrentNavigation()?.extras.state;
       if (this.routeState) {
@@ -38,7 +47,7 @@ export class CurriculumComponent implements OnInit {
           this.isReponseReceivedPromise = Promise.resolve(true);
         },
         (error) => {
-          this.curriculumInfo = DefaultCurriculumInfo;
+          this.curriculumInfo = getDefaultInfo(this.localeId);
           this.errorOccurred = true;
           this.isReponseReceivedPromise = Promise.resolve(true);
           console.log('An error has occurred');

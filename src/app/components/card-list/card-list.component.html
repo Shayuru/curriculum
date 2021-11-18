@@ -2,7 +2,8 @@
   <article class="message is-info">
     <div id="education" class="message-header">
       <p>
-        <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>&nbsp; Education
+        <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>&nbsp;
+        {{ "cardList.education" | translate }}
       </p>
     </div>
     <div class="message-body has-background-white">
@@ -14,36 +15,36 @@
 </div>
 <app-contact
   id="contact"
-  cardTitle="Contact"
+  cardTitle="{{ 'cardList.contact' | translate }}"
   iconName="phone"
   [contactInfo]="curriculumInfo.contact"
 ></app-contact>
 <app-card-info
-  cardTitle="Languages"
+  cardTitle="{{ 'cardList.languages' | translate }}"
   iconName="language"
   [cardItems]="curriculumInfo.languages"
 ></app-card-info>
 
 <app-card-info
-  cardTitle="Latest trainings"
+  cardTitle="{{ 'cardList.trainings' | translate }}"
   iconName="book"
   [cardItems]="curriculumInfo.courses"
 ></app-card-info>
 
 <app-card-info
-  cardTitle="Soft Skills"
+  cardTitle="{{ 'cardList.softSkills' | translate }}"
   iconName="thumbs-up"
   [cardItems]="curriculumInfo.softSkills"
 ></app-card-info>
 
 <app-card-info
-  cardTitle="Project Methodologies/Frameworks"
+  cardTitle="{{ 'cardList.sdlcTypes' | translate }}"
   iconName="tasks"
   [cardItems]="curriculumInfo.sdlcTypes"
 ></app-card-info>
 
 <app-card-info
-  cardTitle="Hobbies"
+  cardTitle="{{ 'cardList.hobbies' | translate }}"
   iconName="camera"
   [cardItems]="curriculumInfo.hobbies"
 ></app-card-info>

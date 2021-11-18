@@ -8,35 +8,62 @@
       (click)="removeNotification(errorNotification)"
       class="delete"
     ></button>
-    An error occurred while reading the information from AWS. You are viewing
-    the default information and maybe is not up to date. You can send me an
-    email to notify this situation.
+    {{ "errorApiCurriculum" | translate }}
   </div>
   <div class="content has-text-centered">
-    <p>
-      This website was built with
-      <a href="https://angular.io" target="_blank" rel="noopener noreferrer"
-        >Angular</a
-      >,
-      <a href="https://bulma.io" target="_blank" rel="noopener noreferrer">
-        Bulma</a
-      >
-      and uses
-      <a
-        href="https://aws.amazon.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        AWS</a
-      >
-      as proof of concept. The source code is in my Github space
-      <br />You can see the architecture diagram
-      <a
-        href="/assets/images/aws_architecture.jpg"
-        target="_blank"
-        rel="noopener noreferrer"
-        >here</a
-      >.
-    </p>
+    <ng-container *ngIf="('footer' | translate) == 'en'">
+      <p>
+        This website was built with
+        <a href="https://angular.io" target="_blank" rel="noopener noreferrer"
+          >Angular</a
+        >,
+        <a href="https://bulma.io" target="_blank" rel="noopener noreferrer">
+          Bulma</a
+        >
+        and uses
+        <a
+          href="https://aws.amazon.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          AWS</a
+        >
+        as proof of concept. The source code is in my Github space.
+        <br />You can see the architecture diagram
+        <a
+          href="/assets/images/aws_architecture.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          >here</a
+        >.
+      </p>
+    </ng-container>
+    <ng-container *ngIf="('footer' | translate) == 'es'">
+      <p>
+        Este sitio fue construido con
+        <a href="https://angular.io" target="_blank" rel="noopener noreferrer"
+          >Angular</a
+        >,
+        <a href="https://bulma.io" target="_blank" rel="noopener noreferrer">
+          Bulma</a
+        >
+        y usa
+        <a
+          href="https://aws.amazon.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          AWS</a
+        >
+        como una prueba de concepto. El código fuente se encuentra en mi Github.
+        <br />Puedes ver el diagrama de arquitectura aqui
+        <a
+          href="/assets/images/aws_architecture.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          >aquí</a
+        >.
+      </p>
+    </ng-container>
   </div>
 </footer>
