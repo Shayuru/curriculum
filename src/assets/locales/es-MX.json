@@ -1,0 +1,33 @@
+{
+  "welcome": {
+    "title": "Bienvenida(o)",
+    "subtitle": "Soy Francisco, soy Ingeniero de Software",
+    "message": "Por favor espera mientras eres redireccionada(o)..."
+  },
+  "curriculum": {
+    "loading": "Cargando...",
+    "profile": "Perfil",
+    "professionalExperience": "Experiencia",
+    "now": "Ahora"
+  },
+  "cardList": {
+    "education": "Educación",
+    "contact": "Contacto",
+    "languages": "Idiomas",
+    "trainings": "Últimos cursos",
+    "softSkills": "Habilidades blandas",
+    "sdlcTypes": "Metodologias/Marcos  de proyectos",
+    "hobbies": "Pasatiempos"
+  },
+  "cardExperience": {
+    "moreInformation": "Más información",
+    "mainTechnologies": "Principales tecnologías/herramientas"
+  },
+  "footer": "es",
+  "errorApiCurriculum": "Ocurrió un error al leer la información de AWS. Estas viendo la información por defecto y posiblemente no sea la más actual. Puedes enviarme un correo para notificar esta situación.",
+  "languages": {
+    "description": "Idiomas",
+    "english": "Inglés",
+    "spanish": "Español"
+  }
+}
