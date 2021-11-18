@@ -6,15 +6,17 @@ import { CurriculumService } from '../../services/curriculum.service';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { DefaultCurriculumInfo } from '../../models/default-info';
+import { DefaultCurriculumInfoEnglish } from '../../models/default-info-en-US';
 
 import { RouterTestingModule } from '@angular/router/testing';
+
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 describe('CurriculumComponent', () => {
   let component: CurriculumComponent;
   let fixture: ComponentFixture<CurriculumComponent>;
   let curriculumServiceSpy: any;
-  let curriculumInfo: any = DefaultCurriculumInfo;
+  let curriculumInfo: any = DefaultCurriculumInfoEnglish;
 
   //TODO implement mock service
 
@@ -27,7 +29,11 @@ describe('CurriculumComponent', () => {
     // Provide the dummy/mock data to sortNumberData method.
     curriculumServiceSpy.getCurriculInfo.returnValue([curriculumInfo]);*/
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule, [RouterTestingModule]],
+      imports: [
+        HttpClientModule,
+        [RouterTestingModule],
+        TranslateModule.forRoot(),
+      ],
       declarations: [CurriculumComponent],
       providers: [CurriculumService],
       /*providers: [

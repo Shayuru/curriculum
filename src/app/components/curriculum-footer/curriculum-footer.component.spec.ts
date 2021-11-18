@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 import { CurriculumFooterComponent } from './curriculum-footer.component';
 
 describe('CurriculumFooterComponent', () => {
@@ -8,9 +10,9 @@ describe('CurriculumFooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CurriculumFooterComponent ]
-    })
-    .compileComponents();
+      imports: [TranslateModule.forRoot()],
+      declarations: [CurriculumFooterComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
