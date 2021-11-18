@@ -2,16 +2,38 @@
   position: absolute;
   background-color: inherit;
   padding-left: 0.8rem;
-  padding-top: 0.8rem;
+  padding-top: 0.2rem;
 }
 .navbar-item {
   color: #4a4a4a;
   font-weight: 600;
 }
-.navbar-item:hover {
+.navbar-item:hover,
+.navbar-link:hover {
   color: #3e8ed0;
 }
-
 .navbar-start {
   flex-direction: column;
+}
+@media only screen and (min-width: 1024px) {
+  .navbar-item-des {
+    display: none;
+  }
+  .langMenuEs {
+    padding-left: 1.6rem;
+  }
+  .langMenuEn {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .has-tooltip-right {
+    overflow: hidden;
+  }
+  .langMenuEs {
+    padding-left: 2.3rem;
+  }
+  .langMenuEn {
+    padding-left: 2.8rem;
+  }
 }
