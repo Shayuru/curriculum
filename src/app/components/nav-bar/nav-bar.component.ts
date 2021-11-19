@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { saveLocalStorageLanguage } from '../../utils/common.utils';
 
@@ -14,6 +14,15 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {}
 
   scrollTo(target: string) {
+    const menuBurgerCollection =
+      document.getElementsByClassName('navbar-burger');
+    if (menuBurgerCollection.length > 0) {
+      const menuBurger = menuBurgerCollection.item(0) as HTMLElement;
+      //If  class 'is-active' is present, navbar-burger is open
+      if (menuBurger.classList.contains('is-active')) {
+        this.togleMenuBurger(menuBurger);
+      }
+    }
     this.scroller.scrollToAnchor(target);
   }
 
@@ -24,6 +33,7 @@ export class NavBarComponent implements OnInit {
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate(['/curriculum']);
   }
+
   togleMenuBurger(menuBurger: HTMLElement) {
     const target: string = menuBurger.dataset.target || '';
     if (target != '') {
