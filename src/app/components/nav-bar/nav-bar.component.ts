@@ -74,7 +74,7 @@ export class NavBarComponent implements OnInit {
 
   addDocumentClicListenr(menuBurger: HTMLElement) {
     if (menuBurger.classList.contains('is-active')) {
-      document.addEventListener('click', this.documentClickHandler);
+      document.addEventListener('click', this.documentClickHandler, true);
       return;
     }
     document.removeEventListener('click', this.documentClickHandler);
