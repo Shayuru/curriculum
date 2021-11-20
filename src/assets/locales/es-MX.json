@@ -1,14 +1,15 @@
 {
   "welcome": {
     "title": "Bienvenida(o)",
-    "subtitle": "Soy Francisco, soy Ingeniero de Software",
+    "subtitle": "Soy Francisco, un Ingeniero de Software",
     "message": "Por favor espera mientras eres redireccionada(o)..."
   },
   "curriculum": {
     "loading": "Cargando...",
     "profile": "Perfil",
     "professionalExperience": "Experiencia",
-    "now": "Ahora"
+    "now": "Ahora",
+    "top": "Al inicio"
   },
   "cardList": {
     "education": "Educación",

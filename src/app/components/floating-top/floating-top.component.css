@@ -1,0 +1,12 @@
+#scrollTopAnchor {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.2rem;
+  z-index: 99;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+#scrollTopAnchor:hover {
+  color: #3e8ed0;
+}

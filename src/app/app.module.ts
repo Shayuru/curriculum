@@ -21,6 +21,7 @@ import { CardExperienceComponent } from './components/card-experience/card-exper
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FloatingTopComponent } from './components/floating-top/floating-top.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locales/', '.json');
@@ -38,6 +39,7 @@ export function createTranslateLoader(http: HttpClient) {
     CurriculumFooterComponent,
     CardExperienceComponent,
     NavBarComponent,
+    FloatingTopComponent,
   ],
   imports: [
     BrowserModule,
