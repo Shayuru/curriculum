@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
-import {
-  getDefaultInfo,
-  getlocalStorageLanguage,
-} from '../../utils/common.utils';
+import { getlocalStorageLanguage } from '../../utils/common.utils';
 import { TranslateService } from '@ngx-translate/core';
+import {
+  CurriculumServiceResponse,
+  getCurriculumServiceResponse,
+} from '../../utils/service-utils';
 
 @Component({
   selector: 'app-curriculum',
@@ -41,18 +42,16 @@ export class CurriculumComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.curriculumInfo == null) {
-      this._curriculumService.getCurriculInfo().subscribe(
-        (result) => {
-          this.curriculumInfo = result;
-          this.isReponseReceivedPromise = Promise.resolve(true);
-        },
-        (error) => {
-          this.curriculumInfo = getDefaultInfo(this.localeId);
-          this.errorOccurred = true;
-          this.isReponseReceivedPromise = Promise.resolve(true);
-          console.log('An error has occurred');
-          console.error(<any>error);
-        }
+      const responseServiceCallback = (response: CurriculumServiceResponse) => {
+        this.curriculumInfo = response.curriculumInfo;
+        this.errorOccurred = response.errorOccurred;
+        this.isReponseReceivedPromise = Promise.resolve(true);
+      };
+
+      getCurriculumServiceResponse(
+        this._curriculumService,
+        this.localeId,
+        responseServiceCallback
       );
     } else {
       this.isReponseReceivedPromise = Promise.resolve(true);

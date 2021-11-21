@@ -6,6 +6,10 @@ import {
   getDefaultInfo,
   getlocalStorageLanguage,
 } from '../../utils/common.utils';
+import {
+  CurriculumServiceResponse,
+  getCurriculumServiceResponse,
+} from '../../utils/service-utils';
 
 const sleepTime: number = 6000;
 
@@ -41,17 +45,16 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     let startTime: Date = new Date();
 
-    this._curriculumService.getCurriculInfo().subscribe(
-      (result) => {
-        this.curriculumInfo = result;
-        this.navigateToRoute(startTime);
-      },
-      (error) => {
-        console.error(<any>error);
-        this.curriculumInfo = getDefaultInfo(this.localeId);
-        this.errorOccurred = true;
-        this.navigateToRoute(startTime);
-      }
+    const responseServiceCallback = (response: CurriculumServiceResponse) => {
+      this.curriculumInfo = response.curriculumInfo;
+      this.errorOccurred = response.errorOccurred;
+      this.navigateToRoute(startTime);
+    };
+
+    getCurriculumServiceResponse(
+      this._curriculumService,
+      this.localeId,
+      responseServiceCallback
     );
   }
 
