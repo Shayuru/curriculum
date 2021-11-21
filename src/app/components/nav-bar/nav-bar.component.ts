@@ -1,7 +1,10 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { saveLocalStorageLanguage } from '../../utils/common.utils';
+import {
+  getlocalStorageLanguage,
+  saveLocalStorageLanguage,
+} from '../../utils/common.utils';
 
 @Component({
   selector: 'app-nav-bar',
@@ -32,6 +35,7 @@ export class NavBarComponent implements OnInit {
   }
 
   changeLanguage(lang: string) {
+    if (getlocalStorageLanguage(localStorage) == lang) return;
     saveLocalStorageLanguage(localStorage, lang);
     /*TODO This is the easiest way (reload path), verify other options 
     (eg. update curriculumInfo in curriculum component)*/
