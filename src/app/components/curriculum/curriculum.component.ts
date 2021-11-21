@@ -1,7 +1,12 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { DefaultCurriculumInfo } from '../../models/default-info';
+import { Component, OnInit } from '@angular/core';
 import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
+import { getlocalStorageLanguage } from '../../utils/common.utils';
+import { TranslateService } from '@ngx-translate/core';
+import {
+  CurriculumServiceResponse,
+  getCurriculumServiceResponse,
+} from '../../utils/service-utils';
 
 @Component({
   selector: 'app-curriculum',
@@ -14,11 +19,16 @@ export class CurriculumComponent implements OnInit {
   public errorOccurred: boolean = false;
   public isReponseReceivedPromise!: Promise<boolean>;
   private routeState: any;
+  private localeId: string;
 
   constructor(
     private _curriculumService: CurriculumService,
-    private router: Router
+    private router: Router,
+    private _translate: TranslateService
   ) {
+    this.localeId = getlocalStorageLanguage(localStorage);
+    this._translate.use(this.localeId);
+
     if (router?.getCurrentNavigation()?.extras.state) {
       this.routeState = router.getCurrentNavigation()?.extras.state;
       if (this.routeState) {
@@ -32,18 +42,16 @@ export class CurriculumComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.curriculumInfo == null) {
-      this._curriculumService.getCurriculInfo().subscribe(
-        (result) => {
-          this.curriculumInfo = result;
-          this.isReponseReceivedPromise = Promise.resolve(true);
-        },
-        (error) => {
-          this.curriculumInfo = DefaultCurriculumInfo;
-          this.errorOccurred = true;
-          this.isReponseReceivedPromise = Promise.resolve(true);
-          console.log('An error has occurred');
-          console.error(<any>error);
-        }
+      const responseServiceCallback = (response: CurriculumServiceResponse) => {
+        this.curriculumInfo = response.curriculumInfo;
+        this.errorOccurred = response.errorOccurred;
+        this.isReponseReceivedPromise = Promise.resolve(true);
+      };
+
+      getCurriculumServiceResponse(
+        this._curriculumService,
+        this.localeId,
+        responseServiceCallback
       );
     } else {
       this.isReponseReceivedPromise = Promise.resolve(true);

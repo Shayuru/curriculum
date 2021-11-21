@@ -1,0 +1,34 @@
+{
+  "welcome": {
+    "title": "Welcome",
+    "subtitle": "I'm Francisco, I'm a Software Engineer",
+    "message": "Please wait while you're being redirected..."
+  },
+  "curriculum": {
+    "loading": "Loading...",
+    "profile": "Profile",
+    "professionalExperience": "Experience",
+    "now": "Now",
+    "top": "To top"
+  },
+  "cardList": {
+    "education": "Education",
+    "contact": "Contact",
+    "languages": "Languages",
+    "trainings": "Latest trainings",
+    "softSkills": "Soft Skills",
+    "sdlcTypes": "Project Methodologies/Frameworks",
+    "hobbies": "Hobbies"
+  },
+  "cardExperience": {
+    "moreInformation": "More information",
+    "mainTechnologies": "Main technologies/tools"
+  },
+  "footer": "en",
+  "errorApiCurriculum": "An error occurred while reading the information from AWS. You are viewing the default information and maybe is not up to date. You can send me an email to notify this situation.",
+  "languages": {
+    "description": "Languages",
+    "english": "English",
+    "spanish": "Spanish"
+  }
+}

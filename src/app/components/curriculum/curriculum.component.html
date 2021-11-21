@@ -1,4 +1,5 @@
 <div class="container" role="main">
+  <app-floating-top></app-floating-top>
   <app-nav-bar></app-nav-bar>
   <div class="card">
     <div class="card-image">
@@ -11,7 +12,7 @@
     </div>
     <div *ngIf="!(isReponseReceivedPromise | async)" class="loading">
       <progress class="progress is-small is-white" max="100">15%</progress>
-      <p>Loading...</p>
+      <p>{{ "curriculum.loading" | translate }}.</p>
     </div>
     <div *ngIf="isReponseReceivedPromise | async" class="card-content">
       <div class="media">
@@ -35,7 +36,9 @@
           <div class="tile is-vertical is-12">
             <div class="tile is-parent">
               <div class="tile is-child box">
-                <p class="title has-text-info profile">Profile</p>
+                <p class="title has-text-info profile">
+                  {{ "curriculum.profile" | translate }}
+                </p>
                 <div class="content text-justified">
                   <p *ngFor="let paragraph of curriculumInfo.profile">
                     {{ paragraph }}
@@ -54,14 +57,17 @@
                   <article class="message is-info">
                     <div id="professionalexp" class="message-header">
                       <p>
-                        <fa-icon [icon]="['fas', 'clock']"></fa-icon
-                        >&nbsp;Professional Experience
+                        <fa-icon [icon]="['fas', 'clock']"></fa-icon>&nbsp;{{
+                          "curriculum.professionalExperience" | translate
+                        }}
                       </p>
                     </div>
                     <div class="message-body has-background-white">
                       <div class="timeline">
                         <header class="timeline-header">
-                          <span class="tag is-medium is-info">Now</span>
+                          <span class="tag is-medium is-info">{{
+                            "curriculum.now" | translate
+                          }}</span>
                         </header>
                         <ng-container
                           *ngFor="let experience of curriculumInfo.experience"

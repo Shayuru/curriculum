@@ -1,6 +1,6 @@
-export var DefaultCurriculumInfo = {
-  name: 'Francisco Jardon Estrada',
-  title: 'Sr. Software Engineer',
+export var DefaultCurriculumInfoEnglish = {
+  name: 'Francisco Jardón Estrada',
+  title: 'Ingeniero de Software',
   profile: [
     'Enthusiastic about technology, highly experienced in software development in the financial sector working as Software Engineer, Full stack Engineer',
     "Receptive to customer's needs, analytical, disciplined, always willing to seek for modern technologies and solutions to problems in software development cycle.",

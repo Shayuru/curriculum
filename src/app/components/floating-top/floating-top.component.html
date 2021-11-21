@@ -1,0 +1,14 @@
+<div *ngIf="showScrollTop">
+  <a
+    id="scrollTopAnchor"
+    class="navbar-item has-tooltip-arrow has-tooltip-left"
+    (click)="scrollTop()"
+    attr.data-tooltip="{{ 'curriculum.top' | translate }}"
+  >
+    <fa-icon
+      [icon]="['fas', 'chevron-circle-up']"
+      flip="horizontal"
+      size="2x"
+    ></fa-icon>
+  </a>
+</div>

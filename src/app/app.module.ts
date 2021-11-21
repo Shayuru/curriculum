@@ -11,7 +11,7 @@ import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -19,6 +19,13 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { CurriculumFooterComponent } from './components/curriculum-footer/curriculum-footer.component';
 import { CardExperienceComponent } from './components/card-experience/card-experience.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FloatingTopComponent } from './components/floating-top/floating-top.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/locales/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -32,6 +39,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     CurriculumFooterComponent,
     CardExperienceComponent,
     NavBarComponent,
+    FloatingTopComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +47,13 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     FontAwesomeModule,
     HttpClientModule,
     AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

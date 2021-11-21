@@ -1,7 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { DefaultCurriculumInfo } from '../../models/default-info';
 import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import {
+  getDefaultInfo,
+  getlocalStorageLanguage,
+} from '../../utils/common.utils';
+import {
+  CurriculumServiceResponse,
+  getCurriculumServiceResponse,
+} from '../../utils/service-utils';
 
 const sleepTime: number = 6000;
 
@@ -23,30 +31,34 @@ const delayIfNeeded = async (startTime: Date) => {
 export class WelcomeComponent implements OnInit {
   public curriculumInfo: any;
   public errorOccurred: boolean = false;
+  private localeId: string;
 
   constructor(
     private _curriculumService: CurriculumService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private _translate: TranslateService
+  ) {
+    this.localeId = getlocalStorageLanguage(localStorage);
+    this._translate.use(this.localeId);
+  }
 
   ngOnInit(): void {
     let startTime: Date = new Date();
 
-    this._curriculumService.getCurriculInfo().subscribe(
-      async (result) => {
-        this.curriculumInfo = result;
-        this.navigateToRoute(startTime);
-      },
-      async (error) => {
-        console.error(<any>error);
-        this.curriculumInfo = DefaultCurriculumInfo;
-        this.errorOccurred = true;
-        this.navigateToRoute(startTime);
-      }
+    const responseServiceCallback = (response: CurriculumServiceResponse) => {
+      this.curriculumInfo = response.curriculumInfo;
+      this.errorOccurred = response.errorOccurred;
+      this.navigateToRoute(startTime);
+    };
+
+    getCurriculumServiceResponse(
+      this._curriculumService,
+      this.localeId,
+      responseServiceCallback
     );
   }
 
-  async navigateToRoute(startTime: Date) {
+  navigateToRoute(startTime: Date) {
     delayIfNeeded(startTime).then(() => {
       this.router.navigate(['/curriculum'], {
         state: {

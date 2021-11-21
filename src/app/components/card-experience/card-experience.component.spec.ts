@@ -2,19 +2,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardExperienceComponent } from './card-experience.component';
 
-import { DefaultCurriculumInfo } from '../../models/default-info';
+import { DefaultCurriculumInfoEnglish } from '../../models/default-info-en-US';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('CardExperienceComponent', () => {
   let component: CardExperienceComponent;
   let fixture: ComponentFixture<CardExperienceComponent>;
-  let curriculumInfo: any = DefaultCurriculumInfo;
+  let curriculumInfo: any = DefaultCurriculumInfoEnglish;
   let experience: any = curriculumInfo.experience;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule],
+      imports: [NoopAnimationsModule, TranslateModule.forRoot()],
       declarations: [CardExperienceComponent],
     }).compileComponents();
   });

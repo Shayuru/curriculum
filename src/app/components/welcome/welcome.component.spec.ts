@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 import {
   HttpClientTestingModule,
   HttpTestingController,
@@ -21,7 +23,11 @@ describe('WelcomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule, RouterTestingModule],
+      imports: [
+        HttpClientModule,
+        RouterTestingModule,
+        TranslateModule.forRoot(),
+      ],
       declarations: [WelcomeComponent],
       providers: [CurriculumService],
     }).compileComponents();
