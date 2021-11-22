@@ -14,7 +14,7 @@ export class CurriculumService {
 
   constructor(public _httpClient: HttpClient) {
     const idCurriculum: number = 1;
-    const localeParam: string = getLanguageParameter(localStorage);
+    const localeParam: string = getLanguageParameter();
     this.params = new HttpParams()
       .set('id', idCurriculum)
       .set('lang', localeParam);
