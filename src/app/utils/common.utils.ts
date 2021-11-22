@@ -4,14 +4,11 @@ const languageKey: string = 'language';
 const defaultLanguage: string = 'en-US';
 const spanishLanguage: string = 'es-MX';
 
-export const getlocalStorageLanguage: any = (localStorage: Storage) => {
+export const getlocalStorageLanguage: any = () => {
   return localStorage.getItem(languageKey) || defaultLanguage;
 };
 
-export const saveLocalStorageLanguage = (
-  localStorage: Storage,
-  language: string
-): void => {
+export const saveLocalStorageLanguage = (language: string): void => {
   localStorage.setItem(languageKey, language);
 };
 
@@ -21,7 +18,7 @@ export const getDefaultInfo: any = (locale: string) => {
     : DefaultCurriculumInfoEnglish;
 };
 
-export const getLanguageParameter: any = (localStorage: Storage) => {
-  const localeId: string = getlocalStorageLanguage(localStorage);
+export const getLanguageParameter: any = () => {
+  const localeId: string = getlocalStorageLanguage();
   return localeId == spanishLanguage ? 'es' : 'en';
 };

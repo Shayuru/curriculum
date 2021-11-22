@@ -26,7 +26,7 @@ export class CurriculumComponent implements OnInit {
     private router: Router,
     private _translate: TranslateService
   ) {
-    this.localeId = getlocalStorageLanguage(localStorage);
+    this.localeId = getlocalStorageLanguage();
     this._translate.use(this.localeId);
 
     if (router?.getCurrentNavigation()?.extras.state) {

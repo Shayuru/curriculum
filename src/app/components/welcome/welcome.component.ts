@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import {
-  getDefaultInfo,
-  getlocalStorageLanguage,
-} from '../../utils/common.utils';
+import { getlocalStorageLanguage } from '../../utils/common.utils';
 import {
   CurriculumServiceResponse,
   getCurriculumServiceResponse,
@@ -38,7 +35,7 @@ export class WelcomeComponent implements OnInit {
     private router: Router,
     private _translate: TranslateService
   ) {
-    this.localeId = getlocalStorageLanguage(localStorage);
+    this.localeId = getlocalStorageLanguage();
     this._translate.use(this.localeId);
   }
 

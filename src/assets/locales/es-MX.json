@@ -30,5 +30,6 @@
     "description": "Idiomas",
     "english": "Inglés",
     "spanish": "Español"
-  }
+  },
+  "notFound": "¡No pudimos encontrar la página! Ni si quiera con visión de rayos X"
 }

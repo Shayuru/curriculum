@@ -30,5 +30,6 @@
     "description": "Languages",
     "english": "English",
     "spanish": "Spanish"
-  }
+  },
+  "notFound": "We couldn't find that page! Not even with x-ray vision"
 }

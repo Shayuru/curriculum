@@ -35,8 +35,8 @@ export class NavBarComponent implements OnInit {
   }
 
   changeLanguage(lang: string) {
-    if (getlocalStorageLanguage(localStorage) == lang) return;
-    saveLocalStorageLanguage(localStorage, lang);
+    if (getlocalStorageLanguage() == lang) return;
+    saveLocalStorageLanguage(lang);
     /*TODO This is the easiest way (reload path), verify other options 
     (eg. update curriculumInfo in curriculum component)*/
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
