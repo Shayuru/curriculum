@@ -33,7 +33,7 @@ export class CurriculumComponent implements OnInit {
     this._translate.use(this.localeId);
     let replayValue: string = getReplayValue(route);
 
-    this.replay = replayValue == 'true' ? true : false;
+    this.replay = replayValue == 'false' ? false : true;
 
     if (router?.getCurrentNavigation()?.extras.state) {
       this.routeState = router.getCurrentNavigation()?.extras.state;
