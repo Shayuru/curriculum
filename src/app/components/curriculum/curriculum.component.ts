@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CurriculumService } from '../../services/curriculum.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { getlocalStorageLanguage } from '../../utils/common.utils';
 import { TranslateService } from '@ngx-translate/core';
 import {
   CurriculumServiceResponse,
   getCurriculumServiceResponse,
+  getReplayValue,
 } from '../../utils/service-utils';
 
 @Component({
@@ -20,14 +21,19 @@ export class CurriculumComponent implements OnInit {
   public isReponseReceivedPromise!: Promise<boolean>;
   private routeState: any;
   private localeId: string;
+  private replay: boolean = true;
 
   constructor(
     private _curriculumService: CurriculumService,
     private router: Router,
-    private _translate: TranslateService
+    private _translate: TranslateService,
+    private route: ActivatedRoute
   ) {
     this.localeId = getlocalStorageLanguage();
     this._translate.use(this.localeId);
+    let replayValue: string = getReplayValue(route);
+
+    this.replay = replayValue == 'true' ? true : false;
 
     if (router?.getCurrentNavigation()?.extras.state) {
       this.routeState = router.getCurrentNavigation()?.extras.state;
@@ -51,7 +57,8 @@ export class CurriculumComponent implements OnInit {
       getCurriculumServiceResponse(
         this._curriculumService,
         this.localeId,
-        responseServiceCallback
+        responseServiceCallback,
+        this.replay
       );
     } else {
       this.isReponseReceivedPromise = Promise.resolve(true);

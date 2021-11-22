@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { getReplayValue } from 'src/app/utils/service-utils';
 import {
   getlocalStorageLanguage,
   saveLocalStorageLanguage,
@@ -14,6 +15,7 @@ import {
 export class NavBarComponent implements OnInit {
   menuBurgerCurriculumId: string = 'menuBurgerCurriculum';
   navbarCurriculumId: string = 'navbarCurriculum';
+  replayValue: string = '';
 
   documentClickHandler = (_event: any) => {
     if (
@@ -25,7 +27,13 @@ export class NavBarComponent implements OnInit {
     this.togleMenuBurgerIfActivated();
   };
 
-  constructor(private scroller: ViewportScroller, private router: Router) {}
+  constructor(
+    private scroller: ViewportScroller,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.replayValue = getReplayValue(route);
+  }
 
   ngOnInit(): void {}
 
@@ -37,11 +45,15 @@ export class NavBarComponent implements OnInit {
   changeLanguage(lang: string) {
     if (getlocalStorageLanguage() == lang) return;
     saveLocalStorageLanguage(lang);
-    /*TODO This is the easiest way (reload path), verify other options 
-    (eg. update curriculumInfo in curriculum component)*/
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
-    this.router.navigate(['/curriculum']);
+    if (this.replayValue != '' && this.replayValue.trim().length <= 5) {
+      this.router.navigate(['/curriculum'], {
+        queryParams: { replay: this.replayValue },
+      });
+    } else {
+      this.router.navigate(['/curriculum']);
+    }
   }
 
   togleMenuBurger(menuBurger: HTMLElement) {
