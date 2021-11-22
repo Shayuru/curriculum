@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { CurriculumService } from '../services/curriculum.service';
 import { getDefaultInfo } from './common.utils';
 import { shareReplay } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 class ObservableInstance {
   observableService: Observable<any> | undefined;
 
@@ -41,12 +42,15 @@ export class CurriculumServiceResponse {
 export function getCurriculumServiceResponse(
   _curriculumService: CurriculumService,
   localeId: string,
-  responseServiceCallback: (response: CurriculumServiceResponse) => void
+  responseServiceCallback: (response: CurriculumServiceResponse) => void,
+  replay: boolean = true
 ) {
   const curriculumResponse: CurriculumServiceResponse =
     new CurriculumServiceResponse();
 
-  let observableService = factory.getObservable(_curriculumService, localeId);
+  let observableService = replay
+    ? factory.getObservable(_curriculumService, localeId)
+    : _curriculumService.getCurriculInfo();
 
   observableService.subscribe(
     (result) => {
@@ -61,4 +65,8 @@ export function getCurriculumServiceResponse(
       responseServiceCallback(curriculumResponse);
     }
   );
+}
+
+export function getReplayValue(route: ActivatedRoute): string {
+  return route.snapshot.queryParamMap.get('replay') || '';
 }
