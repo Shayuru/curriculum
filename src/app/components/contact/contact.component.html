@@ -25,9 +25,7 @@
         </div>
         <div class="media-content">
           <p class="title is-6">
-            <a href="mailto:francisco.jardon@outlook.com">
-              {{ contactInfo.email }}</a
-            >
+            <a href="mailto:francisco.jardon@outlook.com"> {{ contactInfo.email }}</a>
           </p>
         </div>
       </div>
@@ -38,7 +36,15 @@
           </figure>
         </div>
         <div class="media-content">
-          <p class="title is-6">{{ contactInfo.location }}</p>
+          <p class="title is-6">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.google.com.mx/maps/place/Toluca+de+Lerdo,+M%C3%A9x./@24.91428,-98.8574656,6z/data=!4m13!1m7!3m6!1s0x85cd89892a50ebb9:0xad3f4ad5550208c4!2sToluca+de+Lerdo,+M%C3%A9x.!3b1!8m2!3d19.2826098!4d-99.6556653!3m4!1s0x85cd89892a50ebb9:0xad3f4ad5550208c4!8m2!3d19.2826098!4d-99.6556653"
+            >
+              {{ contactInfo.location }}</a
+            >
+          </p>
         </div>
       </div>
       <div class="media">
