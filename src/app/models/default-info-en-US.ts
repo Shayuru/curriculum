@@ -2,8 +2,8 @@ export var DefaultCurriculumInfoEnglish = {
   name: 'Francisco Jardón Estrada',
   title: 'Ingeniero de Software',
   profile: [
-    'Enthusiastic about technology, highly experienced in software development in the financial sector working as Software Engineer, Full stack Engineer',
-    "Receptive to customer's needs, analytical, disciplined, always willing to seek for modern technologies and solutions to problems in software development cycle.",
+    'Enthusiastic about technology, highly experienced in software development in the financial sector working as Software Engineer, Full-stack Engineer',
+    "Receptive to customer's needs, analytical, disciplined, always willing to seek modern technologies and solutions to problems in the software development cycle.",
     "My education includes a master's degree in Computer Systems at the Engineering School of the Mexico State Autonomous University (UAEM).",
     'During my career I have worked with a variety of technologies and programming languages such as: Java 2EE, Spring, Restful API, SOAP Webservices, IBM MQ, Message Broker, HTML, CSS, JS, JSP, Angular/JS, Shell Scripting, PLSQL, T-SQL, Jenkins, Git/GitHub, WebSphere, Hibernate, Oracle, SQL Server, DB2, Android, .NET Framework (VB & C#), ASP .NET. ADO .NET and some others.',
   ],
@@ -49,8 +49,7 @@ export var DefaultCurriculumInfoEnglish = {
           subactivities: [],
         },
         {
-          activity:
-            'Responsible for providing guidance to junior engineers on secure software development',
+          activity: 'Guide Junior Engineers on secure software development',
           subactivities: [],
         },
         {
@@ -96,10 +95,10 @@ export var DefaultCurriculumInfoEnglish = {
           activity:
             'Software development (backend and frontend) including activities like requirements analysis, solution design development, testing and post-implementation for:',
           subactivities: [
-            'Bulk payroll accounts opening, up to 8,000 customer and accounts per day representing about 100K requests to mainframe systems, concurrency was a key feature to keep mainframe stability (maximum 20 parallel process)',
+            'Bulk payroll accounts opening, up to 8,000 customers and accounts per day representing about 100K requests to mainframe systems, concurrency was a key feature to keep mainframe stability (maximum 20 parallel processes)',
             'Payroll portability, provide web services to other applications for portability status and service opening (up to 1.5 M requests per day), money transfer through Electronic Payments Interbank System SPEI (up to 25 K requests per batch, 3 batches per day)',
             'Customers and Staff Maintenance (personal information and accounts)',
-            'Investment surcharge, provide services to other application for investments',
+            'Investment surcharge, provide services to other applications for investments',
             'Desktop application to interact with mainframe emulations to update customer information',
           ],
         },
@@ -128,12 +127,12 @@ export var DefaultCurriculumInfoEnglish = {
           subactivities: [
             "Windows desktop applications to notify ATM's failures using: Email, Mobile, SNMP and SFTP",
             'Windows desktop applications for data cleaning',
-            'ASP .NET web applications to gathering branches information, user level satisfaction surveys, project tracking (to help in the evaluation of administration program performance)',
+            'ASP .NET web applications to gather branches information, user-level satisfaction surveys, project tracking (to help in the evaluation of administration program performance)',
           ],
         },
         {
           activity:
-            "IT Dashboard web site migration based on Java: containing KPI's, critical process indicators, etc. developed in Business Objects and WebSphere using MVC pattern",
+            'IT Dashboard website migration based on Java: containing KPIs, critical process indicators, etc. developed in Business Objects and WebSphere using MVC pattern',
           subactivities: [],
         },
         {
@@ -161,7 +160,7 @@ export var DefaultCurriculumInfoEnglish = {
       description: [
         {
           activity:
-            'Inventory application development considering use of scanner code bar, capable to add, delete, modify, and search records, manage, and propose dates in delivering and pick up supplies, reports, user, and password control',
+            'Inventory application development considering the use of scanner code bar, capable to add, delete, modify, and search records, managing, and proposing  dates in delivering and pick up supplies, reports, user, and password control',
           subactivities: [],
         },
         {
