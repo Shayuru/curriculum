@@ -28,7 +28,7 @@ export var DefaultCurriculumInfoSpanish = {
   ],
   softSkills: [
     'Adaptabilidad al cambio',
-    'Pensamiento análitco/critico',
+    'Pensamiento analítico/critico',
     'Organización',
     'Empatía',
   ],
@@ -45,7 +45,7 @@ export var DefaultCurriculumInfoSpanish = {
       description: [
         {
           activity:
-            'Revisión y remediación de hallazgos de seguridad en el desarrollo de las aplicaciones Web,Java, análisis: SAST, DAST y FOSS',
+            'Revisión y remediación de hallazgos de seguridad en el desarrollo de aplicaciones web basadas en Java, análisis: SAST, DAST y FOSS',
           subactivities: [],
         },
         {
@@ -55,16 +55,16 @@ export var DefaultCurriculumInfoSpanish = {
         },
         {
           activity:
-            'Desarrollo y mantenimiento de aplicaciones (backend y frontend) incluyendo actividades como analisis de requerimientos, diseño de solución, desarrollo, pruebs y post-impementación:',
+            'Desarrollo y mantenimiento de aplicaciones (backend y frontend) incluyendo actividades como análisis de requerimientos, diseño de solución, desarrollo, pruebas y post-impementación:',
           subactivities: [
             'Aplicación web para mantenimiento masivo de cuentas y contratos de nómina (identificación y clasificación) en los sistemas de mainframe (hasta 50 mil registros por solicitud)',
             'Agenda web para integración de expediente de clientes, diseñada para completar la apertura de cuentas de nómina (contrato digital)',
-            'App para Android para ingegración de expediente, toma de fotos de documentos (INE, documento de residencia), OCR, toma de huelllas mediante 4F (identificación mediante foto)',
+            'App para Android para ingegración de expediente, toma de fotos de documentos (INE, documento de residencia), OCR, toma de huellas  mediante 4F (identificación mediante foto)',
           ],
         },
         {
           activity:
-            'Generación de flujos en IBM Message Broker para el backend de SFE (aplicación de call center), para obtener información de cliente, cuentas, tarjetas del sistema core origen (mainframe)',
+            'Generación de flujos en IBM Message Broker para el backend de SFE (aplicación de call center), para obtener información de cliente, cuentas, tarjetas del sistema Core (mainframe)',
           subactivities: [],
         },
         {
@@ -78,7 +78,7 @@ export var DefaultCurriculumInfoSpanish = {
           subactivities: [],
         },
         {
-          activity: 'Migracion de aplicaciones de Websphere a Liberty ',
+          activity: 'Migración de aplicaciones de Websphere a Liberty',
           subactivities: [],
         },
       ],
@@ -87,16 +87,16 @@ export var DefaultCurriculumInfoSpanish = {
       company: 'HSBC MÉXICO',
       location: 'TOLUCA, MÉXICO',
       date: '2007 - 2015',
-      position: 'Asesor de Sistemas (Desarollador mid-level)',
+      position: 'Asesor de Sistemas (Desarrollador mid-level)',
       tools:
         'Java 2EE, Spring (IoC, Validation, Transactions, JDBC), Hibernate, SOAP Webservices, IBM MQ, HTML, CSS, JS, JSP, Servlets, CGI, Shell Scripting, PLSQL, Oracle, DB2, Informix, Linux Suse, Rational Team Concert, WebSphere, .NET Framework (VB & C#), Maven',
       description: [
         {
           activity:
-            'Desarrollo y mantenimiento de aplicaciones (backend y frontend) incluyendo actividades como analisis de requerimientos, diseño de solución, desarrollo, pruebs y post-impementación:',
+            'Desarrollo y mantenimiento de aplicaciones (backend y frontend) incluyendo actividades como análisis de requerimientos, diseño de solución, desarrollo, pruebas  y post-implementación:',
           subactivities: [
-            'Aplicación web de alta de cuentas y clientes de Nomina de forma masiva, hasta 8 mil cliente y cuentas al dia lo que representa unas 100 mil peticiones a los sistemas de mainframe, la concurrencia era un punto clave para mantener la estabilidad de mainframe (máximo 20 procesos en paralelo)',
-            'Portabilidad de Nómina interbancaria mediante aplicación web, proveer servicios web para diferentes canales (banca por internet y sucursales) en la apertura y consulta de la portabilidad (hasta 1.5 millones de peticiones al día), transferencia de dinero mediante el sistema electronico de pagos interbancarios SPEI (hasta 25 mil peticiones por proceso programado, 3 procesos al día) ',
+            'Aplicación web de alta de cuentas y clientes de Nomina de forma masiva, hasta 8 mil cliente y cuentas al día lo que representa unas 100 mil peticiones a los sistemas de mainframe, la concurrencia era un punto clave para mantener la estabilidad de mainframe (máximo 20 procesos en paralelo)',
+            'Portabilidad de Nómina interbancaria mediante aplicación web, proveer servicios web para diferentes canales (banca por internet y sucursales) en la apertura y consulta de la portabilidad (hasta 1.5 millones de peticiones al día), transferencia de dinero mediante el sistema electrónico  de pagos interbancarios SPEI (hasta 25 mil peticiones por proceso programado, 3 procesos al día) ',
             'Aplicación web para sobretasas en inversiones de tasa fija/variable',
             'Aplicación de escritorio para interactuar con la emulación de mainframe y actualizar información de clientes y cuentas',
           ],
@@ -118,27 +118,27 @@ export var DefaultCurriculumInfoSpanish = {
       description: [
         {
           activity:
-            'Análisis, seguimiento e implementación de los proyectos especiales de monitoreo de /ATM’s. Cuatro empleados me reportaban directamente.',
+            'Análisis, seguimiento e implementación de los proyectos especiales de monitoreo de ATMs. Cuatro empleados me reportaban directamente.',
           subactivities: [],
         },
         {
           activity: 'Desarrollo de Programas:',
           subactivities: [
-            'Aplicaciones de escritorio para notificación de fallas de ATM’s usando: Email, Celular, Sky, SNMP, SFTP',
+            'Aplicaciones de escritorio para notificación de fallas de ATMs usando: Email, Celular, Sky, SNMP, SFTP',
             'Aplicaciones de escritorio para limpieza de datos',
             'Aplicaciones web en ASP .NET para reunir información de las sucursales, encuestas de satisfacción de cliente, seguimiento de proyectos (para ayudar a evaluar el programa de administración de desempeño)',
           ],
         },
         {
           activity:
-            'Migración de Web basado en Java (JSP y beans)  y el modelado de datos para IT Dashboard (contiendo KPI’s, Indicadores de Procesos Críticos, etc. realizados en Business Objects), en .NET y Websphere y patrón MVC (dos plataformas diferentes).',
+            'Migración de Web basado en Java (JSP y beans)  para el modelado de datos del IT Dashboard (contiendo KPI’s, Indicadores de Procesos Críticos, etc. realizados en Business Objects), en .NET y Websphere y patrón MVC (dos plataformas diferentes).',
           subactivities: [],
         },
         {
           activity:
-            'Administración y mantenimiento de base de datos incluyendo acividades como:',
+            'Administración y mantenimiento de base de datos incluyendo actividades como:',
           subactivities: [
-            'Modelado y creación de base datos, tablas, store procedures, vistas, ETLs (car y descarga de información hasta 2 millones de registros por día)',
+            'Modelado y creación de base datos, tablas, store procedures, vistas, ETLs (carga y descarga de información hasta 2 millones de registros por día)',
             'Control de acceso de usuarios',
             'Respaldos',
           ],
@@ -159,7 +159,7 @@ export var DefaultCurriculumInfoSpanish = {
       description: [
         {
           activity:
-            'Desarrollo de aplicación de Inventarios considerando: uso de scanner de código de barras, capaz de agregar, borrar, modificar  y buscar registros, manejar y proponer tiempos de entrega y recolección de medios, visualización de reportes, control de acceso mediante usuario y contraseña',
+            'Desarrollo de aplicación de Inventarios considerando: uso de scanner de código de barras, capaz de agregar, borrar, modificar y buscar registros, manejar y proponer tiempos de entrega y recolección de medios, visualización de reportes, control de acceso mediante usuario y contraseña',
           subactivities: [],
         },
         {
@@ -167,7 +167,7 @@ export var DefaultCurriculumInfoSpanish = {
           subactivities: [],
         },
         {
-          activity: 'Desarrollo de la pagina Web e intranet de la compañía',
+          activity: 'Desarrollo de la página Web e intranet de la compañía',
           subactivities: [],
         },
         {
@@ -176,7 +176,7 @@ export var DefaultCurriculumInfoSpanish = {
         },
         {
           activity:
-            'Recolección de información acerca de cintas de respaldo de  ING  Comercial América para migrar  su Base de Datos del inventario hacia Disaster Recovery',
+            'Recolección de información acerca de cintas de respaldo de ING Comercial América para migrar su Base de Datos del inventario hacia Disaster Recovery',
           subactivities: [],
         },
         {
