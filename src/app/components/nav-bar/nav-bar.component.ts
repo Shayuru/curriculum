@@ -2,10 +2,7 @@ import { DOCUMENT, ViewportScroller } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { getReplayValue } from 'src/app/utils/service-utils';
-import {
-  getlocalStorageLanguage,
-  saveLocalStorageLanguage,
-} from '../../utils/common.utils';
+import { getlocalStorageLanguage, saveLocalStorageLanguage } from '../../utils/common.utils';
 
 @Component({
   selector: 'app-nav-bar',
@@ -18,10 +15,7 @@ export class NavBarComponent implements OnInit {
   replayValue: string = '';
 
   documentClickHandler = (_event: any) => {
-    if (
-      _event.target.id == this.menuBurgerCurriculumId ||
-      !this.isBurgerActivated()
-    ) {
+    if (_event.target.id == this.menuBurgerCurriculumId || !this.isBurgerActivated()) {
       return;
     }
     this.togleMenuBurgerIfActivated();
@@ -79,23 +73,16 @@ export class NavBarComponent implements OnInit {
 
   togleMenuBurgerIfActivated() {
     if (this.isBurgerActivated()) {
-      const menuBurger = document.getElementById(
-        this.menuBurgerCurriculumId
-      ) as HTMLElement;
+      const menuBurger = document.getElementById(this.menuBurgerCurriculumId) as HTMLElement;
       this.togleMenuBurger(menuBurger);
     }
   }
 
   isBurgerActivated(): boolean {
     return (
-      (document
-        .getElementById(this.menuBurgerCurriculumId)
-        ?.classList.contains('is-active') ||
+      (document.getElementById(this.menuBurgerCurriculumId)?.classList.contains('is-active') ||
         false) &&
-      (document
-        .getElementById(this.navbarCurriculumId)
-        ?.classList.contains('is-active') ||
-        false)
+      (document.getElementById(this.navbarCurriculumId)?.classList.contains('is-active') || false)
     );
   }
 

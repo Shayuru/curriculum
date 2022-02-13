@@ -1,8 +1,4 @@
-<nav
-  class="navbar is-transparent"
-  role="navigation"
-  aria-label="dropdown navigation"
->
+<nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
   <a
     #menuBurgerCurriculum
     id="menuBurgerCurriculum"
@@ -22,9 +18,7 @@
       <a
         class="navbar-item has-tooltip-arrow has-tooltip-right"
         (click)="scrollTo('professionalexp')"
-        attr.data-tooltip="{{
-          'curriculum.professionalExperience' | translate
-        }}"
+        attr.data-tooltip="{{ 'curriculum.professionalExperience' | translate }}"
       >
         <fa-icon [icon]="['fas', 'clock']" size="lg"></fa-icon>
         <span class="navbar-item-des"
@@ -36,14 +30,8 @@
         (click)="scrollTo('contact')"
         attr.data-tooltip="{{ 'cardList.contact' | translate }}"
       >
-        <fa-icon
-          [icon]="['fas', 'phone']"
-          flip="horizontal"
-          size="lg"
-        ></fa-icon>
-        <span class="navbar-item-des"
-          >&nbsp;{{ "cardList.contact" | translate }}</span
-        >
+        <fa-icon [icon]="['fas', 'phone']" flip="horizontal" size="lg"></fa-icon>
+        <span class="navbar-item-des">&nbsp;{{ "cardList.contact" | translate }}</span>
       </a>
       <a
         class="navbar-item has-tooltip-arrow has-tooltip-right"
@@ -56,9 +44,7 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           <fa-icon [icon]="['fas', 'globe']" size="lg"></fa-icon>
-          <span class="navbar-item-des"
-            >&nbsp;{{ "languages.description" | translate }}</span
-          >
+          <span class="navbar-item-des">&nbsp;{{ "languages.description" | translate }}</span>
         </a>
         <div class="navbar-dropdown is-boxed">
           <a
@@ -66,10 +52,7 @@
             [ngClass]="{ langMenuEs: ('footer' | translate) == 'es' }"
             (click)="changeLanguage('en-US')"
           >
-            <fa-icon
-              *ngIf="('footer' | translate) == 'en'"
-              [icon]="['fas', 'check']"
-            ></fa-icon>
+            <fa-icon *ngIf="('footer' | translate) == 'en'" [icon]="['fas', 'check']"></fa-icon>
             &nbsp;
             {{ "languages.english" | translate }}
           </a>
@@ -78,10 +61,7 @@
             [ngClass]="{ langMenuEn: ('footer' | translate) == 'en' }"
             (click)="changeLanguage('es-MX')"
           >
-            <fa-icon
-              *ngIf="('footer' | translate) == 'es'"
-              [icon]="['fas', 'check']"
-            ></fa-icon>
+            <fa-icon *ngIf="('footer' | translate) == 'es'" [icon]="['fas', 'check']"></fa-icon>
             &nbsp;{{ "languages.spanish" | translate }}
           </a>
         </div>

@@ -10,14 +10,12 @@ export class CurriculumService {
   headers: HttpHeaders = new HttpHeaders().set('x-api-key', utils.apiKey);
   params: HttpParams;
 
-  public apiPath: string = '/prod/v1/curriculum';
+  apiPath: string = '/prod/v1/curriculum';
 
   constructor(public _httpClient: HttpClient) {
     const idCurriculum: number = 1;
     const localeParam: string = getLanguageParameter();
-    this.params = new HttpParams()
-      .set('id', idCurriculum)
-      .set('lang', localeParam);
+    this.params = new HttpParams().set('id', idCurriculum).set('lang', localeParam);
   }
 
   getCurriculInfo(): Observable<any> {

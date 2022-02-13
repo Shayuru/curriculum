@@ -29,11 +29,7 @@ describe('CurriculumComponent', () => {
     // Provide the dummy/mock data to sortNumberData method.
     curriculumServiceSpy.getCurriculInfo.returnValue([curriculumInfo]);*/
     await TestBed.configureTestingModule({
-      imports: [
-        HttpClientModule,
-        [RouterTestingModule],
-        TranslateModule.forRoot(),
-      ],
+      imports: [HttpClientModule, [RouterTestingModule], TranslateModule.forRoot()],
       declarations: [CurriculumComponent],
       providers: [CurriculumService],
       /*providers: [

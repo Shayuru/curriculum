@@ -3,10 +3,7 @@ import { CurriculumService } from '../../services/curriculum.service';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { getlocalStorageLanguage } from '../../utils/common.utils';
-import {
-  CurriculumServiceResponse,
-  getCurriculumServiceResponse,
-} from '../../utils/service-utils';
+import { CurriculumServiceResponse, getCurriculumServiceResponse } from '../../utils/service-utils';
 
 const sleepTime: number = 6000;
 
@@ -48,11 +45,7 @@ export class WelcomeComponent implements OnInit {
       this.navigateToRoute(startTime);
     };
 
-    getCurriculumServiceResponse(
-      this._curriculumService,
-      this.localeId,
-      responseServiceCallback
-    );
+    getCurriculumServiceResponse(this._curriculumService, this.localeId, responseServiceCallback);
   }
 
   navigateToRoute(startTime: Date) {

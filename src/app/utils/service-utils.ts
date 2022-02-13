@@ -8,9 +8,7 @@ class ObservableInstance {
 
   getInstace(_curriculumService: CurriculumService): Observable<any> {
     if (!this.observableService) {
-      this.observableService = _curriculumService
-        .getCurriculInfo()
-        .pipe(shareReplay(1));
+      this.observableService = _curriculumService.getCurriculInfo().pipe(shareReplay(1));
     }
 
     return this.observableService;
@@ -21,10 +19,7 @@ class ObservableFactory {
   instanceEn: ObservableInstance = new ObservableInstance();
 
   constructor() {}
-  getObservable(
-    _curriculumService: CurriculumService,
-    localeId: string
-  ): Observable<any> {
+  getObservable(_curriculumService: CurriculumService, localeId: string): Observable<any> {
     if (localeId == 'es-MX') {
       return this.instanceEs.getInstace(_curriculumService);
     }
@@ -33,7 +28,7 @@ class ObservableFactory {
   }
 }
 
-var factory: ObservableFactory = new ObservableFactory();
+const factory: ObservableFactory = new ObservableFactory();
 export class CurriculumServiceResponse {
   curriculumInfo: any;
   errorOccurred: boolean = false;
@@ -45,8 +40,7 @@ export function getCurriculumServiceResponse(
   responseServiceCallback: (response: CurriculumServiceResponse) => void,
   replay: boolean = true
 ) {
-  const curriculumResponse: CurriculumServiceResponse =
-    new CurriculumServiceResponse();
+  const curriculumResponse: CurriculumServiceResponse = new CurriculumServiceResponse();
 
   let observableService = replay
     ? factory.getObservable(_curriculumService, localeId)
