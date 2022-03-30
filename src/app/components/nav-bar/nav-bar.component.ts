@@ -1,11 +1,8 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { getReplayValue } from 'src/app/utils/service-utils';
-import {
-  getlocalStorageLanguage,
-  saveLocalStorageLanguage,
-} from '../../utils/common.utils';
+import { getlocalStorageLanguage, saveLocalStorageLanguage } from '../../utils/common.utils';
 
 @Component({
   selector: 'app-nav-bar',
@@ -18,10 +15,7 @@ export class NavBarComponent implements OnInit {
   replayValue: string = '';
 
   documentClickHandler = (_event: any) => {
-    if (
-      _event.target.id == this.menuBurgerCurriculumId ||
-      !this.isBurgerActivated()
-    ) {
+    if (_event.target.id == this.menuBurgerCurriculumId || !this.isBurgerActivated()) {
       return;
     }
     this.togleMenuBurgerIfActivated();
@@ -30,7 +24,8 @@ export class NavBarComponent implements OnInit {
   constructor(
     private scroller: ViewportScroller,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    @Inject(DOCUMENT) private document: Document
   ) {
     this.replayValue = getReplayValue(route);
   }
@@ -54,6 +49,16 @@ export class NavBarComponent implements OnInit {
     } else {
       this.router.navigate(['/curriculum']);
     }
+    this.changeDocumentLanguage(lang);
+  }
+
+  changeDocumentLanguage(lang: string) {
+    //Default
+    let langKey: string = 'en';
+    if (lang == 'es-MX') {
+      langKey = 'es';
+    }
+    this.document.documentElement.lang = langKey;
   }
 
   togleMenuBurger(menuBurger: HTMLElement) {
@@ -68,23 +73,16 @@ export class NavBarComponent implements OnInit {
 
   togleMenuBurgerIfActivated() {
     if (this.isBurgerActivated()) {
-      const menuBurger = document.getElementById(
-        this.menuBurgerCurriculumId
-      ) as HTMLElement;
+      const menuBurger = document.getElementById(this.menuBurgerCurriculumId) as HTMLElement;
       this.togleMenuBurger(menuBurger);
     }
   }
 
   isBurgerActivated(): boolean {
     return (
-      (document
-        .getElementById(this.menuBurgerCurriculumId)
-        ?.classList.contains('is-active') ||
+      (document.getElementById(this.menuBurgerCurriculumId)?.classList.contains('is-active') ||
         false) &&
-      (document
-        .getElementById(this.navbarCurriculumId)
-        ?.classList.contains('is-active') ||
-        false)
+      (document.getElementById(this.navbarCurriculumId)?.classList.contains('is-active') || false)
     );
   }
 

@@ -8,9 +8,8 @@ describe('FloatingTopComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FloatingTopComponent ]
-    })
-    .compileComponents();
+      declarations: [FloatingTopComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

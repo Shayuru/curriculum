@@ -9,15 +9,10 @@ export class FloatingTopComponent implements OnInit {
   public showScrollTop: boolean = false;
 
   detectScroll = () => {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       this.showScrollTop = true;
       if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
-        document
-          .getElementById('scrollTopAnchor')
-          ?.removeAttribute('data-tooltip');
+        document.getElementById('scrollTopAnchor')?.removeAttribute('data-tooltip');
       }
     } else {
       this.showScrollTop = false;

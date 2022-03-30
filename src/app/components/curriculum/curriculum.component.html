@@ -4,10 +4,7 @@
   <div class="card">
     <div class="card-image">
       <figure class="image image is-3by1">
-        <img
-          src="/assets/images/header_profile.jpg"
-          alt="Header Image Profile"
-        />
+        <img src="/assets/images/header_profile.jpg" alt="Header Image Profile" />
       </figure>
     </div>
     <div *ngIf="!(isReponseReceivedPromise | async)" class="loading">
@@ -15,14 +12,10 @@
       <p>{{ "curriculum.loading" | translate }}.</p>
     </div>
     <div *ngIf="isReponseReceivedPromise | async" class="card-content">
-      <div class="media">
+      <div class="media media-header">
         <div class="media-left">
           <figure class="image is-128x128">
-            <img
-              class="is-rounded"
-              src="/assets/images/profile.jpg"
-              alt="Profle image"
-            />
+            <img class="is-rounded" src="/assets/images/profile.jpg" alt="Profle image" />
           </figure>
         </div>
         <div class="media-content">
@@ -48,9 +41,7 @@
             </div>
             <div class="tile custom-title">
               <div class="tile is-parent is-vertical is-4">
-                <app-card-list
-                  [curriculumInfo]="curriculumInfo"
-                ></app-card-list>
+                <app-card-list [curriculumInfo]="curriculumInfo"></app-card-list>
               </div>
               <div class="tile is-parent">
                 <div class="tile is-child box custom-message">
@@ -69,12 +60,8 @@
                             "curriculum.now" | translate
                           }}</span>
                         </header>
-                        <ng-container
-                          *ngFor="let experience of curriculumInfo.experience"
-                        >
-                          <app-card-experience
-                            [experience]="experience"
-                          ></app-card-experience
+                        <ng-container *ngFor="let experience of curriculumInfo.experience">
+                          <app-card-experience [experience]="experience"></app-card-experience
                         ></ng-container>
                         <div class="timeline-header">
                           <span class="tag is-medium is-info">2003</span>
@@ -87,9 +74,7 @@
             </div>
           </div>
         </div>
-        <app-curriculum-footer
-          [errorOccurred]="errorOccurred"
-        ></app-curriculum-footer>
+        <app-curriculum-footer [errorOccurred]="errorOccurred"></app-curriculum-footer>
       </div>
     </div>
   </div>

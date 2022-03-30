@@ -1,11 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {
-  trigger,
-  transition,
-  state,
-  animate,
-  style,
-} from '@angular/animations';
+import { trigger, transition, state, animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-card-experience',
@@ -46,12 +40,8 @@ export class CardExperienceComponent implements OnInit {
     iconElement1.classList.toggle('is-hidden');
     iconElement2.classList.toggle('is-hidden');
 
-    if (
-      card.parentElement != null &&
-      card.parentElement.parentElement != null
-    ) {
-      let element = card.parentElement.parentElement
-        .childNodes[1] as HTMLElement;
+    if (card.parentElement != null && card.parentElement.parentElement != null) {
+      let element = card.parentElement.parentElement.childNodes[1] as HTMLElement;
       element.classList.toggle('is-hidden');
       this.isOpen = !this.isOpen;
     }

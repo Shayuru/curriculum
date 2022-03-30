@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CurriculumService } from '../../services/curriculum.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { getlocalStorageLanguage } from '../../utils/common.utils';
@@ -8,6 +8,7 @@ import {
   getCurriculumServiceResponse,
   getReplayValue,
 } from '../../utils/service-utils';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-curriculum',
@@ -27,7 +28,8 @@ export class CurriculumComponent implements OnInit {
     private _curriculumService: CurriculumService,
     private router: Router,
     private _translate: TranslateService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    @Inject(DOCUMENT) private document: Document
   ) {
     this.localeId = getlocalStorageLanguage();
     this._translate.use(this.localeId);
@@ -52,6 +54,7 @@ export class CurriculumComponent implements OnInit {
         this.curriculumInfo = response.curriculumInfo;
         this.errorOccurred = response.errorOccurred;
         this.isReponseReceivedPromise = Promise.resolve(true);
+        this.changeDocumentLanguage();
       };
 
       getCurriculumServiceResponse(
@@ -68,5 +71,14 @@ export class CurriculumComponent implements OnInit {
   removeNotification(target: any) {
     let parentNode = target.parentNode as HTMLElement;
     parentNode.removeChild(target);
+  }
+
+  changeDocumentLanguage() {
+    //Default
+    let langKey: string = 'en';
+    if (this.localeId == 'es-MX') {
+      langKey = 'es';
+    }
+    this.document.documentElement.lang = langKey;
   }
 }

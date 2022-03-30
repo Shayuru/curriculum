@@ -13,9 +13,7 @@ export const saveLocalStorageLanguage = (language: string): void => {
 };
 
 export const getDefaultInfo: any = (locale: string) => {
-  return locale == spanishLanguage
-    ? DefaultCurriculumInfoSpanish
-    : DefaultCurriculumInfoEnglish;
+  return locale == spanishLanguage ? DefaultCurriculumInfoSpanish : DefaultCurriculumInfoEnglish;
 };
 
 export const getLanguageParameter: any = () => {

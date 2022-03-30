@@ -7,10 +7,7 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { ContactComponent } from './components/contact/contact.component';
-import {
-  FontAwesomeModule,
-  FaIconLibrary,
-} from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
