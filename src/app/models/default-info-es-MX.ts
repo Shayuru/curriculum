@@ -13,7 +13,6 @@ export var DefaultCurriculumInfoSpanish = {
     date: '2003 - 2005',
   },
   contact: {
-    telegram: '@fcojardone',
     email: 'francisco.jardon@outlook.com',
     location: 'Toluca, Estado de México',
     linkedin: 'http://www.linkedin.com/in/francisco-jardon-e-b4639930',
@@ -49,8 +48,7 @@ export var DefaultCurriculumInfoSpanish = {
           subactivities: [],
         },
         {
-          activity:
-            'Asesorar a los ingenieros junior en el desarrollo seguro de software',
+          activity: 'Asesorar a los ingenieros junior en el desarrollo seguro de software',
           subactivities: [],
         },
         {
@@ -73,8 +71,7 @@ export var DefaultCurriculumInfoSpanish = {
           subactivities: [],
         },
         {
-          activity:
-            'Análisis y seguimiento para migración de aplicaciones web a AWS',
+          activity: 'Análisis y seguimiento para migración de aplicaciones web a AWS',
           subactivities: [],
         },
         {
@@ -135,8 +132,7 @@ export var DefaultCurriculumInfoSpanish = {
           subactivities: [],
         },
         {
-          activity:
-            'Administración y mantenimiento de base de datos incluyendo actividades como:',
+          activity: 'Administración y mantenimiento de base de datos incluyendo actividades como:',
           subactivities: [
             'Modelado y creación de base datos, tablas, store procedures, vistas, ETLs (carga y descarga de información hasta 2 millones de registros por día)',
             'Control de acceso de usuarios',
@@ -155,7 +151,7 @@ export var DefaultCurriculumInfoSpanish = {
       date: '2003 - 2004',
       position: 'DESARROLLADOR',
       tools:
-        'VB, SQL Server 2000, HTML, JS, CSS, IIS, Crystal Reports/Business Objects, Windows 2000 Serve, Citrix',
+        'VB, SQL Server 2000, HTML, JS, CSS, IIS, Crystal Reports/Business Objects, Windows 2000 Server, Citrix',
       description: [
         {
           activity:

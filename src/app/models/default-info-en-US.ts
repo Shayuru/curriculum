@@ -13,7 +13,6 @@ export var DefaultCurriculumInfoEnglish = {
     date: '2003 - 2005',
   },
   contact: {
-    telegram: '@fcojardone',
     email: 'francisco.jardon@outlook.com',
     location: 'Toluca, Mexico State',
     linkedin: 'http://www.linkedin.com/in/francisco-jardon-e-b4639930',
@@ -26,12 +25,7 @@ export var DefaultCurriculumInfoEnglish = {
     'Developing on AWS',
     'AWS Certified Solution Architect- Associate SAA-C02',
   ],
-  softSkills: [
-    'Adaptability',
-    'Analytical/Critical Thinking',
-    'Self-Direction',
-    'Empathy',
-  ],
+  softSkills: ['Adaptability', 'Analytical/Critical Thinking', 'Self-Direction', 'Empathy'],
   sdlcTypes: ['Scrum', 'SAFe', 'Waterfall'],
   hobbies: ['Photography', 'Hiking', 'Reading', 'Listening to music'],
   experience: [
@@ -72,8 +66,7 @@ export var DefaultCurriculumInfoEnglish = {
           subactivities: [],
         },
         {
-          activity:
-            'Analysis and requirements gathering for web application migration to AWS',
+          activity: 'Analysis and requirements gathering for web application migration to AWS',
           subactivities: [],
         },
         {
@@ -136,8 +129,7 @@ export var DefaultCurriculumInfoEnglish = {
           subactivities: [],
         },
         {
-          activity:
-            'Database maintenance/management including activities like:',
+          activity: 'Database maintenance/management including activities like:',
           subactivities: [
             'Modeling and creation of databases, tables, store procedures, views and ETLs processes (load/unload up to 2 M records per day)',
             'User access control ',
@@ -154,9 +146,9 @@ export var DefaultCurriculumInfoEnglish = {
       company: 'DISASTER RECOVERY SERVICES',
       location: 'METEPEC, MEXICO/MEXICO location',
       date: '2003 - 2004',
-      position: 'DEVELOPER)',
+      position: 'DEVELOPER',
       tools:
-        'VB, SQL Server 2000, HTML, JS, CSS, IIS, Crystal Reports/Business Objects, Windows 2000 Serve, Citrix',
+        'VB, SQL Server 2000, HTML, JS, CSS, IIS, Crystal Reports/Business Objects, Windows 2000 Server, Citrix',
       description: [
         {
           activity:
@@ -164,8 +156,7 @@ export var DefaultCurriculumInfoEnglish = {
           subactivities: [],
         },
         {
-          activity:
-            'Reporting delivery and implementation in the Inventory application',
+          activity: 'Reporting delivery and implementation in the Inventory application',
           subactivities: [],
         },
         {
