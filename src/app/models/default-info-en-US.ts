@@ -13,7 +13,6 @@ export var DefaultCurriculumInfoEnglish = {
     date: '2003 - 2005',
   },
   contact: {
-    telegram: '@fcojardone',
     email: 'francisco.jardon@outlook.com',
     location: 'Toluca, Mexico State',
     linkedin: 'http://www.linkedin.com/in/francisco-jardon-e-b4639930',
@@ -147,7 +146,7 @@ export var DefaultCurriculumInfoEnglish = {
       company: 'DISASTER RECOVERY SERVICES',
       location: 'METEPEC, MEXICO/MEXICO location',
       date: '2003 - 2004',
-      position: 'DEVELOPER)',
+      position: 'DEVELOPER',
       tools:
         'VB, SQL Server 2000, HTML, JS, CSS, IIS, Crystal Reports/Business Objects, Windows 2000 Server, Citrix',
       description: [

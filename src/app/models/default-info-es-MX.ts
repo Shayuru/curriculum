@@ -13,7 +13,6 @@ export var DefaultCurriculumInfoSpanish = {
     date: '2003 - 2005',
   },
   contact: {
-    telegram: '@fcojardone',
     email: 'francisco.jardon@outlook.com',
     location: 'Toluca, Estado de México',
     linkedin: 'http://www.linkedin.com/in/francisco-jardon-e-b4639930',
