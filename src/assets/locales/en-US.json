@@ -22,6 +22,7 @@
   },
   "cardExperience": {
     "moreInformation": "More information",
+    "lessInformation": "Less information",
     "mainTechnologies": "Main technologies/tools"
   },
   "footer": "en",
