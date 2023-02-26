@@ -12,11 +12,14 @@
     <section class="section">
       <div class="container">
         <div class="card">
-          <header class="card-header" (click)="togleCardExperience(cardHeader)">
+          <header class="card-header" (click)="togleCardExperience(cardHeaderIcon)">
             <p class="card-header-title">
               {{ "cardExperience.moreInformation" | translate }}
             </p>
-            <div #cardHeader class="arrow-icon">
+            <p class="card-header-title is-hidden">
+              {{ "cardExperience.lessInformation" | translate }}
+            </p>
+            <div #cardHeaderIcon class="arrow-icon">
               <fa-icon [icon]="['fas', 'caret-down']" class="is-vcentered"></fa-icon>
               <fa-icon [icon]="['fas', 'caret-up']" class="is-hidden"></fa-icon>
             </div>
